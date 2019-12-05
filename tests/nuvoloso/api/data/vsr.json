@@ -1,0 +1,229 @@
+{
+    "meta": {
+        "id": "e0f83683-173e-40aa-a616-29cd845d5a53",
+        "objType": "VolumeSeriesRequest",
+        "timeCreated": "2019-09-16T21:06:34.238Z",
+        "timeModified": "2019-09-16T21:07:06.112Z",
+        "version": 16
+    },
+    "applicationGroupIds": [],
+    "clusterId": "1bbed242-1ce6-45e6-8172-aa1e370ccb9f",
+    "completeByTime": "2019-09-16T22:06:34.000Z",
+    "creator": {
+        "accountId": "fcbb460f-05cb-4e93-a229-a8870025bd1e",
+        "tenantAccountId": "6755f243-559c-48f5-850b-d22e0af86d9f",
+        "userId": "f60278be-ab90-446d-ab64-8505423e20b2"
+    },
+    "nodeId": "5ec2be07-b88f-4c19-b53c-465156df1f08",
+    "planOnly": false,
+    "requestedOperations": [
+        "CREATE",
+        "BIND",
+        "PUBLISH",
+        "MOUNT",
+        "ATTACH_FS"
+    ],
+    "servicePlanAllocationCreateSpec": {
+        "messages": [],
+        "reservationState": "UNKNOWN",
+        "systemTags": [],
+        "tags": [],
+        "totalCapacityBytes": 0
+    },
+    "targetPath": "/mnt",
+    "volumeSeriesCreateSpec": {
+        "accountId": "fcbb460f-05cb-4e93-a229-a8870025bd1e",
+        "tenantAccountId": "6755f243-559c-48f5-850b-d22e0af86d9f",
+        "lifecycleManagementData": {
+            "lastSnapTime": "0001-01-01T00:00:00.000Z",
+            "lastUploadTime": "0001-01-01T00:00:00.000Z",
+            "nextSnapshotTime": "0001-01-01T00:00:00.000Z"
+        },
+        "name": "V-1",
+        "servicePlanId": "de899da0-f146-495c-ad7d-046c0e3a540d",
+        "sizeBytes": 1073741824,
+        "systemTags": [],
+        "tags": [
+            "vs-tag1"
+        ]
+    },
+    "capacityReservationPlan": {},
+    "capacityReservationResult": {
+        "desiredReservations": {
+            "4d13c38e-4759-46a1-899f-6e95d3d1d956": {
+                "sizeBytes": 1786773504
+            }
+        }
+    },
+    "lifecycleManagementData": {
+        "lastSnapTime": "0001-01-01T00:00:00.000Z",
+        "lastUploadTime": "0001-01-01T00:00:00.000Z",
+        "nextSnapshotTime": "0001-01-01T00:00:00.000Z"
+    },
+    "mountedNodeDevice": "addce014-414d-43b6-ad53-d9b4bb918422-HEAD",
+    "requestMessages": [
+        {
+            "message": "State change: NEW ⇒ CREATING",
+            "time": "2019-09-16T21:06:34.241Z"
+        },
+        {
+            "message": "Created volume series V-1[addce014-414d-43b6-ad53-d9b4bb918422]",
+            "time": "2019-09-16T21:06:34.266Z"
+        },
+        {
+            "message": "State change: CREATING ⇒ BINDING",
+            "time": "2019-09-16T21:06:34.274Z"
+        },
+        {
+            "message": "State change: BINDING ⇒ PUBLISHING",
+            "time": "2019-09-16T21:06:34.312Z"
+        },
+        {
+            "message": "State change: PUBLISHING ⇒ SIZING",
+            "time": "2019-09-16T21:06:34.353Z"
+        },
+        {
+            "message": "SIZING: ignored requested storageLayout mirrored, using layout standalone",
+            "time": "2019-09-16T21:06:34.368Z"
+        },
+        {
+            "message": "State change: SIZING ⇒ PLACEMENT",
+            "time": "2019-09-16T21:06:34.376Z"
+        },
+        {
+            "message": "Blocked on REI [vreq/placement-block-on-vs-update]",
+            "time": "2019-09-16T21:06:34.376Z"
+        },
+        {
+            "message": "Storage plan updated",
+            "time": "2019-09-16T21:06:34.387Z"
+        },
+        {
+            "message": "State change: PLACEMENT ⇒ STORAGE_WAIT",
+            "time": "2019-09-16T21:06:34.400Z"
+        },
+        {
+            "message": "State change: STORAGE_WAIT ⇒ PLACEMENT",
+            "time": "2019-09-16T21:07:05.773Z"
+        },
+        {
+            "message": "Storage plan updated",
+            "time": "2019-09-16T21:07:05.773Z"
+        },
+        {
+            "message": "Allocated 1704MiB from Storage[13838ea4-fd98-4b4c-a5ab-600052f7f923]",
+            "time": "2019-09-16T21:07:05.789Z"
+        },
+        {
+            "message": "VolumeSeries capacity added:\n capacityAllocations:\n  - SP[4d13c38e-4759-46a1-899f-6e95d3d1d956] consumedBytes=1704MiB (+1704MiB)\n storageParcels:\n  - S[13838ea4-fd98-4b4c-a5ab-600052f7f923] sizeBytes=1704MiB (+1704MiB) SP[4d13c38e-4759-46a1-899f-6e95d3d1d956]",
+            "time": "2019-09-16T21:07:05.799Z"
+        },
+        {
+            "message": "State change: PLACEMENT ⇒ VOLUME_CONFIG",
+            "time": "2019-09-16T21:07:05.799Z"
+        },
+        {
+            "message": "Set rootStorageId [13838ea4-fd98-4b4c-a5ab-600052f7f923] and nuvoVolumeIdentifier [9f06d8af-d5f9-431a-8ce8-47fec05faad4]",
+            "time": "2019-09-16T21:07:05.814Z"
+        },
+        {
+            "message": "Created LogVol [9f06d8af-d5f9-431a-8ce8-47fec05faad4 storageID=13838ea4-fd98-4b4c-a5ab-600052f7f923 parcelUUID=065b6f06-4153-41f0-a994-a6d8fae0f806]",
+            "time": "2019-09-16T21:07:05.837Z"
+        },
+        {
+            "message": "Allocated storage parcels",
+            "time": "2019-09-16T21:07:05.837Z"
+        },
+        {
+            "message": "Set volume state to CONFIGURED",
+            "time": "2019-09-16T21:07:05.845Z"
+        },
+        {
+            "message": "State change: VOLUME_CONFIG ⇒ VOLUME_EXPORT",
+            "time": "2019-09-16T21:07:05.845Z"
+        },
+        {
+            "message": "Set mountState [snapID=HEAD state=MOUNTING]",
+            "time": "2019-09-16T21:07:05.874Z"
+        },
+        {
+            "message": "Set volume state [IN_USE]",
+            "time": "2019-09-16T21:07:05.874Z"
+        },
+        {
+            "message": "Cache allocation is not required",
+            "time": "2019-09-16T21:07:05.875Z"
+        },
+        {
+            "message": "Exported [snapID=HEAD]",
+            "time": "2019-09-16T21:07:05.884Z"
+        },
+        {
+            "message": "Set mountState [snapID=HEAD state=MOUNTED]",
+            "time": "2019-09-16T21:07:05.895Z"
+        },
+        {
+            "message": "State change: VOLUME_EXPORT ⇒ ATTACHING_FS",
+            "time": "2019-09-16T21:07:05.895Z"
+        },
+        {
+            "message": "mount",
+            "time": "2019-09-16T21:07:05.907Z"
+        },
+        {
+            "message": "fsck \"-a\" \"/var/local/nuvoloso/luns/addce014-414d-43b6-ad53-d9b4bb918422-HEAD/vol\"",
+            "time": "2019-09-16T21:07:06.077Z"
+        },
+        {
+            "message": "mount \"-t\" \"ext4\" \"-o\" \"loop,defaults\" \"/var/local/nuvoloso/luns/addce014-414d-43b6-ad53-d9b4bb918422-HEAD/vol\" \"/mnt\"",
+            "time": "2019-09-16T21:07:06.077Z"
+        },
+        {
+            "message": "blkid \"-p\" \"-s\" \"TYPE\" \"-o\" \"export\" \"/var/local/nuvoloso/luns/addce014-414d-43b6-ad53-d9b4bb918422-HEAD/vol\"",
+            "time": "2019-09-16T21:07:06.077Z"
+        },
+        {
+            "message": "mkfs \"-t\" \"ext4\" \"/var/local/nuvoloso/luns/addce014-414d-43b6-ad53-d9b4bb918422-HEAD/vol\"",
+            "time": "2019-09-16T21:07:06.077Z"
+        },
+        {
+            "message": "mount \"-t\" \"ext4\" \"-o\" \"loop,defaults\" \"/var/local/nuvoloso/luns/addce014-414d-43b6-ad53-d9b4bb918422-HEAD/vol\" \"/mnt\"",
+            "time": "2019-09-16T21:07:06.077Z"
+        },
+        {
+            "message": "State change: ATTACHING_FS ⇒ SUCCEEDED",
+            "time": "2019-09-16T21:07:06.086Z"
+        }
+    ],
+    "storageFormula": "AWS-10ms-rand-rw",
+    "storagePlan": {
+        "layoutAlgorithm": "StandaloneLocalUnshared",
+        "storageElements": [
+            {
+                "intent": "DATA",
+                "poolId": "4d13c38e-4759-46a1-899f-6e95d3d1d956",
+                "sizeBytes": 1786773504,
+                "storageParcels": {
+                    "13838ea4-fd98-4b4c-a5ab-600052f7f923": {
+                        "provMinSizeBytes": 1803550720,
+                        "provNodeId": "5ec2be07-b88f-4c19-b53c-465156df1f08",
+                        "provParcelSizeBytes": 893386752,
+                        "provRemainingSizeBytes": 0,
+                        "sizeBytes": 1786773504
+                    }
+                }
+            }
+        ],
+        "storageLayout": "standalone"
+    },
+    "volumeSeriesRequestState": "SUCCEEDED",
+    "servicePlanAllocationId": "904adeeb-d9cd-413c-8ca8-d87c0d404815",
+    "snapshot": {
+        "deleteAfterTime": "0001-01-01T00:00:00.000Z",
+        "locations": [],
+        "sizeBytes": 0,
+        "snapTime": "0001-01-01T00:00:00.000Z"
+    },
+    "systemTags": [],
+    "volumeSeriesId": "addce014-414d-43b6-ad53-d9b4bb918422"
+}

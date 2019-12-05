@@ -1,0 +1,118 @@
+{
+    "meta": {
+        "id": "99ac109d-8f55-4ae9-bd96-0b23483cec83",
+        "objType": "VolumeSeries",
+        "timeCreated": "2019-09-16T21:47:59.469Z",
+        "timeModified": "2019-09-16T21:48:33.838Z",
+        "version": 15
+    },
+    "rootParcelUUID": "257a4708-3983-4eee-857e-cac6723868f0",
+    "accountId": "fcbb460f-05cb-4e93-a229-a8870025bd1e",
+    "tenantAccountId": "6755f243-559c-48f5-850b-d22e0af86d9f",
+    "boundClusterId": "1bbed242-1ce6-45e6-8172-aa1e370ccb9f",
+    "boundCspDomainId": "795e5d76-ee63-4366-b3d4-07bd2ab40250",
+    "capacityAllocations": {
+        "4d13c38e-4759-46a1-899f-6e95d3d1d956": {
+            "consumedBytes": 1786773504,
+            "reservedBytes": 1786773504
+        }
+    },
+    "configuredNodeId": "5ec2be07-b88f-4c19-b53c-465156df1f08",
+    "messages": [
+        {
+            "message": "State change UNBOUND ⇒ BOUND",
+            "time": "2019-09-16T21:47:59.506Z"
+        },
+        {
+            "message": "VolumeSeries capacity added:\n capacityAllocations:\n  - SP[4d13c38e-4759-46a1-899f-6e95d3d1d956] consumedBytes=1704MiB (+1704MiB)\n storageParcels:\n  - S[61e4f6b9-5d90-4de5-8613-c13170da885f] sizeBytes=1704MiB (+1704MiB) SP[4d13c38e-4759-46a1-899f-6e95d3d1d956]",
+            "time": "2019-09-16T21:48:30.911Z"
+        },
+        {
+            "message": "Set rootStorageId [61e4f6b9-5d90-4de5-8613-c13170da885f] and nuvoVolumeIdentifier [522d6723-7b5c-4a0e-92ca-a3b09a8eccf7]",
+            "time": "2019-09-16T21:48:30.966Z"
+        },
+        {
+            "message": "Successfully created the LogVol",
+            "time": "2019-09-16T21:48:30.991Z"
+        },
+        {
+            "message": "State change BOUND ⇒ CONFIGURED",
+            "time": "2019-09-16T21:48:31.011Z"
+        },
+        {
+            "message": "Set mountState [snapID=HEAD state=MOUNTING]",
+            "time": "2019-09-16T21:48:31.034Z"
+        },
+        {
+            "message": "State change CONFIGURED ⇒ IN_USE",
+            "time": "2019-09-16T21:48:31.034Z"
+        },
+        {
+            "message": "Set mountState [snapID=HEAD state=MOUNTED]",
+            "time": "2019-09-16T21:48:31.054Z"
+        },
+        {
+            "message": "VolumeSeries capacity added:\n capacityAllocations:\n  - SP[4d13c38e-4759-46a1-899f-6e95d3d1d956] consumedBytes=1704MiB (+1704MiB)\n storageParcels:\n  - S[61e4f6b9-5d90-4de5-8613-c13170da885f] sizeBytes=1704MiB (+1704MiB) SP[4d13c38e-4759-46a1-899f-6e95d3d1d956]  - S[fake-second-storage] sizeBytes=1704MiB (+1704MiB) SP[4d13c38e-4759-46a1-899f-6e95d3d1d956]\n\n  - S[fake-third-storage] sizeBytes=1704MiB (+1704MiB) SP[4d13c38e-4759-46a1-899f-6e95d3d1d956]",
+            "time": "2019-09-16T21:48:30.911Z"
+        }
+    ],
+    "mounts": [
+        {
+            "mountMode": "READ_WRITE",
+            "mountState": "MOUNTED",
+            "mountTime": "2019-09-16T21:48:31.054Z",
+            "mountedNodeDevice": "99ac109d-8f55-4ae9-bd96-0b23483cec83-HEAD",
+            "mountedNodeId": "5ec2be07-b88f-4c19-b53c-465156df1f08",
+            "snapIdentifier": "HEAD"
+        }
+    ],
+    "nuvoVolumeIdentifier": "522d6723-7b5c-4a0e-92ca-a3b09a8eccf7",
+    "rootStorageId": "61e4f6b9-5d90-4de5-8613-c13170da885f",
+    "servicePlanAllocationId": "904adeeb-d9cd-413c-8ca8-d87c0d404815",
+    "storageParcels": {
+        "61e4f6b9-5d90-4de5-8613-c13170da885f": {
+            "sizeBytes": 1786773504
+        }
+    },
+    "volumeSeriesState": "IN_USE",
+    "clusterDescriptor": {
+        "k8sPvcYaml": {
+            "kind": "STRING",
+            "value": "---\n# This sample PersistentVolumeClaim illustrates how to claim the\n# PersistentVolume identified by its Nuvoloso volume identifier.\n# Adjust the name and namespace to meet your needs and ensure that the\n# 'nuvoloso-account' secret exists in this namespace.\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  namespace: default\n  name: pvc-for-a-pre-provisioned-volume\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 1Gi\n  storageClassName: nuvoloso-general\n  selector:\n    matchLabels:\n      type: nuvoloso-volume\n      volumeId: 99ac109d-8f55-4ae9-bd96-0b23483cec83\n"
+        },
+        "pvName": {
+            "kind": "STRING",
+            "value": "nuvoloso-volume-99ac109d-8f55-4ae9-bd96-0b23483cec83"
+        }
+    },
+    "consistencyGroupId": "1e59174c-546a-4ba0-ae55-f43e6a3ad055",
+    "lifecycleManagementData": {
+        "genUUID": "f2da9108-1c96-45cf-9cf2-c367c47ea3db",
+        "lastSnapTime": "2019-09-16T21:48:31.473Z",
+        "lastUploadSizeBytes": 7340032,
+        "lastUploadTime": "2019-09-16T21:48:31.555Z",
+        "lastUploadTransferRateBPS": 2446677,
+        "layoutAlgorithm": "StandaloneLocalUnshared",
+        "nextSnapshotTime": "2019-09-17T01:18:28.473Z",
+        "sizeEstimateRatio": 1,
+        "writeIOCount": 282
+    },
+    "name": "V-1",
+    "servicePlanId": "de899da0-f146-495c-ad7d-046c0e3a540d",
+    "sizeBytes": 1073741824,
+    "spaAdditionalBytes": 0,
+    "systemTags": [
+        "vsr.creator:4f4bcbf7-9130-4524-97ad-c79d9ab0231a",
+        "volume.cluster.published",
+        "vsr.placement:4f4bcbf7-9130-4524-97ad-c79d9ab0231a",
+        "vsr.setStorageId:4f4bcbf7-9130-4524-97ad-c79d9ab0231a",
+        "vsr.createdLogVol:4f4bcbf7-9130-4524-97ad-c79d9ab0231a",
+        "volume.cluster.lastConfiguredNode:5ec2be07-b88f-4c19-b53c-465156df1f08",
+        "volume.cluster.headStatSeries:f2da9108-1c96-45cf-9cf2-c367c47ea3db",
+        "volume.cluster.headStatCount:282",
+        "volume.cluster.fsAttached:/mnt"
+    ],
+    "tags": [
+        "vs-tag1"
+    ]
+}

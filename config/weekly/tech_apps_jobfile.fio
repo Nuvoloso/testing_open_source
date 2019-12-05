@@ -1,0 +1,65 @@
+# Copyright 2019 Tad Lebeck
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[global]
+direct=1
+size=512m
+bsrange=4k-4k
+timeout=600
+numjobs=4       ; 4 simultaneous threads for each job
+
+[f1]
+rw=write
+
+[f2]
+stonewall
+rw=randwrite
+
+[f3]
+stonewall
+rw=read
+
+[f4]
+stonewall
+rw=randread
+
+[global]
+description=File Access Patterns
+
+[file-based-1]
+bssplit=512/10:1k/5:2k/5:4k/60:8k/2:16k/4:32k/4:64k/10
+rw=randrw
+rwmixread=30
+direct=1
+size=2g
+ioengine=libaio
+iodepth=16
+
+[file-based-2]
+bssplit=512/10:1k/5:2k/5:4k/60:8k/2:16k/4:32k/4:64k/10
+rw=randrw
+rwmixread=50
+direct=1
+size=2g
+ioengine=libaio
+iodepth=16
+
+[file-based-3]
+bssplit=512/10:1k/5:2k/5:4k/60:8k/2:16k/4:32k/4:64k/10
+rw=randrw
+rwmixread=70
+direct=1
+size=2g
+ioengine=libaio
+iodepth=16

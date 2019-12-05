@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "id": "a0d82dab-2224-4c42-9da2-49a343c3a93d",
+        "objType": "StorageRequest",
+        "timeCreated": "2019-09-17T21:41:06.889Z",
+        "timeModified": "2019-09-17T21:41:38.246Z",
+        "version": 7
+    },
+    "accountId": "82d185b9-b414-4551-8422-c8b84fea82c3",
+    "clusterId": "4e826cea-6e54-415b-a69c-b0c602c6f1d0",
+    "completeByTime": "2019-09-17T22:40:54.000Z",
+    "cspDomainId": "1a729c57-41ff-41b5-83ae-0119071fe98a",
+    "cspStorageType": "Amazon gp2",
+    "minSizeBytes": 1803550720,
+    "parcelSizeBytes": 893386752,
+    "poolId": "7bb23e11-ba5f-44af-8c98-da30537a99dd",
+    "requestedOperations": [
+        "PROVISION",
+        "ATTACH",
+        "FORMAT",
+        "USE"
+    ],
+    "tenantAccountId": "39d6c4b0-3eff-4a7a-a407-15ae6b78019c",
+    "requestMessages": [
+        {
+            "message": "State change: NEW ⇒ PROVISIONING",
+            "time": "2019-09-17T21:41:06.902Z"
+        },
+        {
+            "message": "Provisioned 2147483648 bytes from '7bb23e11-ba5f-44af-8c98-da30537a99dd'",
+            "time": "2019-09-17T21:41:06.933Z"
+        },
+        {
+            "message": "Created volume ec2:vol-0b2285687888676d5",
+            "time": "2019-09-17T21:41:22.421Z"
+        },
+        {
+            "message": "State change: PROVISIONING ⇒ ATTACHING",
+            "time": "2019-09-17T21:41:22.424Z"
+        },
+        {
+            "message": "Attached storage 81674950-f853-4a22-99cf-64424997e96b",
+            "time": "2019-09-17T21:41:38.109Z"
+        },
+        {
+            "message": "State change: ATTACHING ⇒ FORMATTING",
+            "time": "2019-09-17T21:41:38.113Z"
+        },
+        {
+            "message": "State change: FORMATTING ⇒ USING",
+            "time": "2019-09-17T21:41:38.230Z"
+        },
+        {
+            "message": "UseDevice: injecting error sreq/block-nuvo-use-device",
+            "time": "2019-09-17T21:41:38.236Z"
+        }
+    ],
+    "storageRequestState": "USING",
+    "nodeId": "4ad871ec-054f-492f-a41d-c9bbd5285c27",
+    "storageId": "81674950-f853-4a22-99cf-64424997e96b",
+    "systemTags": [
+        "vsr.placement:1f1a0a1e-2398-4343-bd9d-cfb2b8e81f85"
+    ],
+    "volumeSeriesRequestClaims": {
+        "claims": {
+            "1f1a0a1e-2398-4343-bd9d-cfb2b8e81f85": {
+                "annotation": "STORAGE-0-0",
+                "sizeBytes": 1786773504
+            }
+        },
+        "remainingBytes": 0
+    }
+}

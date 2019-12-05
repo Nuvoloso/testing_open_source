@@ -1,0 +1,93 @@
+{
+    "meta": {
+        "id": "1bbed242-1ce6-45e6-8172-aa1e370ccb9f",
+        "objType": "Cluster",
+        "timeCreated": "2019-09-12T19:57:01.468Z",
+        "timeModified": "2019-09-14T03:45:36.377Z",
+        "version": 3817
+    },
+    "accountId": "6755f243-559c-48f5-850b-d22e0af86d9f",
+    "clusterType": "kubernetes",
+    "cspDomainId": "795e5d76-ee63-4366-b3d4-07bd2ab40250",
+    "clusterUsagePolicy": {
+        "accountSecretScope": "CLUSTER",
+        "inherited": true,
+        "volumeDataRetentionOnDelete": "RETAIN"
+    },
+    "clusterVersion": "1.13",
+    "service": {
+        "messages": [
+            {
+                "message": "State change: STOPPED ⇒ STARTING",
+                "time": "2019-09-12T19:57:50.360Z"
+            },
+            {
+                "message": "State change: STARTING ⇒ READY",
+                "time": "2019-09-12T19:57:51.386Z"
+            }
+        ],
+        "serviceAttributes": {
+            "clusterResourceState": {
+                "kind": "STRING",
+                "value": "Iteration:1916 #Nodes:2 #Storage:0 #SR:0\n- Node[5ec2be07-b88f-4c19-b53c-465156df1f08] 'ip-172-20-41-49.us-west-2.compute.internal' READY #Attached: 0\n- Node[7f71dbd1-757c-493c-a02c-c076c9281823] 'ip-172-20-56-124.us-west-2.compute.internal' READY #Attached: 0\n"
+            },
+            "crudeStatistics": {
+                "kind": "STRING",
+                "value": "{\"NumWatchersActivated\":5,\"NumActiveWatchers\":4,\"NumLocalEvents\":0,\"NumUpstreamEvents\":91,\"UpstreamMonitor\":{\"RetryCount\":0,\"PingCount\":2543}}"
+            },
+            "metricMoverStatus": {
+                "kind": "STRING",
+                "value": "{\"ConsumerConfigured\":false,\"TxConfigured\":true,\"TxStarted\":true,\"VolumeIOPublished\":0,\"VolumeIOBuffered\":0,\"VolumeIOSent\":55,\"VolumeIOReceived\":55,\"VolumeIODropped\":0,\"StorageIOPublished\":0,\"StorageIOBuffered\":0,\"StorageIOSent\":54,\"StorageIOReceived\":54,\"StorageIODropped\":0}"
+            }
+        },
+        "serviceIP": "100.96.1.12",
+        "serviceLocator": "clusterd-0",
+        "serviceType": "clusterd",
+        "serviceVersion": "a5997bd255ae4916cfb6f98fddb928f087a19ea1 2019-09-12T18:05:26+0000 :",
+        "heartbeatPeriodSecs": 30,
+        "heartbeatTime": "2019-09-14T03:45:36.372Z",
+        "state": "READY"
+    },
+    "authorizedAccounts": [
+        "fcbb460f-05cb-4e93-a229-a8870025bd1e"
+    ],
+    "clusterAttributes": {
+        "ClusterIdentifier": {
+            "kind": "STRING",
+            "value": "k8s-svc-uid:ea88579d-d58c-11e9-80f1-02979d4a2fcc"
+        },
+        "ClusterServiceIP": {
+            "kind": "STRING",
+            "value": "100.96.1.12"
+        },
+        "ClusterServiceLocator": {
+            "kind": "STRING",
+            "value": "clusterd-0"
+        },
+        "ClusterVersion": {
+            "kind": "STRING",
+            "value": "1.13"
+        },
+        "CreationTimestamp": {
+            "kind": "STRING",
+            "value": "2019-09-12T18:41:21Z"
+        },
+        "GitVersion": {
+            "kind": "STRING",
+            "value": "v1.13.10"
+        },
+        "Platform": {
+            "kind": "STRING",
+            "value": "linux/amd64"
+        }
+    },
+    "messages": [
+        {
+            "message": "State change: DEPLOYABLE ⇒ MANAGED",
+            "time": "2019-09-12T19:57:50.395Z"
+        }
+    ],
+    "name": "MyCluster",
+    "state": "MANAGED",
+    "tags": []
+}

@@ -1,0 +1,81 @@
+{
+    "accountId": "6755f243-559c-48f5-850b-d22e0af86d9f",
+    "clusterId": "1bbed242-1ce6-45e6-8172-aa1e370ccb9f",
+    "meta": {
+        "id": "5ec2be07-b88f-4c19-b53c-465156df1f08",
+        "objType": "Node",
+        "timeCreated": "2019-09-13T00:46:30.985Z",
+        "timeModified": "2019-09-14T04:31:08.102Z",
+        "version": 338
+    },
+    "nodeIdentifier": "i-0bec6fceb53850310",
+    "availableCacheBytes": 0,
+    "cacheUnitSizeBytes": 0,
+    "name": "NODE_NAME:ip-172-20-41-49.us-west-2.compute.internal",
+    "nodeAttributes": {
+        "Hostname": {
+            "kind": "STRING",
+            "value": "ip-172-20-41-49.us-west-2.compute.internal"
+        },
+        "InstanceName": {
+            "kind": "STRING",
+            "value": "i-0bec6fceb53850310"
+        },
+        "LocalIP": {
+            "kind": "STRING",
+            "value": "172.20.41.49"
+        },
+        "Zone": {
+            "kind": "STRING",
+            "value": "us-west-2a"
+        },
+        "instance-type": {
+            "kind": "STRING",
+            "value": "t3.medium"
+        },
+        "public-hostname": {
+            "kind": "STRING",
+            "value": "ec2-34-217-104-224.us-west-2.compute.amazonaws.com"
+        },
+        "public-ipv4": {
+            "kind": "STRING",
+            "value": "34.217.104.224"
+        }
+    },
+    "service": {
+        "messages": [
+            {
+                "message": "State change: STOPPED ⇒ STARTING",
+                "time": "2019-09-13T00:46:30.915Z"
+            },
+            {
+                "message": "State change: STARTING ⇒ NOT_READY",
+                "time": "2019-09-13T00:46:30.994Z"
+            },
+            {
+                "message": "State change: NOT_READY ⇒ READY",
+                "time": "2019-09-13T00:46:37.043Z"
+            }
+        ],
+        "serviceAttributes": {
+            "crudeStatistics": {
+                "kind": "STRING",
+                "value": "{\"NumWatchersActivated\":2,\"NumActiveWatchers\":2,\"NumLocalEvents\":0,\"NumUpstreamEvents\":0,\"UpstreamMonitor\":{\"RetryCount\":0,\"PingCount\":0}}"
+            },
+            "metricMoverStatus": {
+                "kind": "STRING",
+                "value": "{\"ConsumerConfigured\":false,\"TxConfigured\":true,\"TxStarted\":true,\"VolumeIOPublished\":0,\"VolumeIOBuffered\":0,\"VolumeIOSent\":0,\"VolumeIOReceived\":0,\"VolumeIODropped\":0,\"StorageIOPublished\":0,\"StorageIOBuffered\":0,\"StorageIOSent\":0,\"StorageIOReceived\":0,\"StorageIODropped\":0}"
+            }
+        },
+        "serviceIP": "100.96.3.2",
+        "serviceLocator": "nuvoloso-node-h7lv8",
+        "serviceType": "agentd",
+        "serviceVersion": "a5997bd255ae4916cfb6f98fddb928f087a19ea1 2019-09-12T18:04:23+0000 :",
+        "heartbeatPeriodSecs": 300,
+        "heartbeatTime": "2019-09-14T04:31:08.096Z",
+        "state": "READY"
+    },
+    "state": "MANAGED",
+    "tags": [],
+    "totalCacheBytes": 0
+}

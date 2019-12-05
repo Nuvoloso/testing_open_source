@@ -1,0 +1,58 @@
+# Copyright 2019 Tad Lebeck
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[global]
+name=fio-RW
+filename=fio-RW
+size=10G
+ioengine=libaio
+direct=0
+numjobs=4
+time_based=1
+runtime=600
+
+[job1]
+iodepth=16
+rw=randrw
+rwmixread=60
+rwmixwrite=40
+bsrange=4K-16K
+
+[job2]
+iodepth=8
+rw=randrw
+rwmixread=10
+rwmixwrite=90
+bsrange=4K-16K
+
+[job3]
+iodepth=4
+rw=randrw
+rwmixread=70
+rwmixwrite=30
+bsrange=4K-16K
+
+[job4]
+iodepth=32
+rw=randrw
+rwmixread=90
+rwmixwrite=10
+bsrange=16K-256K
+
+[job5]
+iodepth=8
+rw=randrw
+rwmixread=70
+rwmixwrite=30
+bsrange=256K-1M

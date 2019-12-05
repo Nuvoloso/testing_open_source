@@ -1,0 +1,66 @@
+# Copyright 2019 Tad Lebeck
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fiol
+  labels:
+    name: fiol
+spec:
+  containers:
+  - resources:
+    name: fiol
+    image: nraina2019/nuvolosotesting:fio
+    env:
+    - name: SIZE
+      value: "1G"
+    - name: RUNTIME
+      value: "36000"
+    - name: IOTYPE
+      value: "randrw"
+    - name: READPERCENT
+      value: "30"
+    - name: WRITEPERCENT
+      value: "70"
+    - name: IODEPTH
+      value: "8"
+    - name: THREADS
+      value: "1"
+    - name: NUMBJOBS
+      value: "1"
+    volumeMounts:
+    - mountPath: /datadir
+      name: datavol
+  volumes:
+    - name: datavol
+      persistentVolumeClaim:
+        claimName: fiolc
+  restartPolicy: Never
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: fiolc
+spec:
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ""
+  accessModes:
+    - ReadWriteOnce
+  selector:
+    matchLabels:
+      type: nuvo-vol
+      nuvomatcher:

@@ -1,0 +1,69 @@
+{
+    "accountId": "fcbb460f-05cb-4e93-a229-a8870025bd1e",
+    "clusterId": "1bbed242-1ce6-45e6-8172-aa1e370ccb9f",
+    "cspDomainId": "795e5d76-ee63-4366-b3d4-07bd2ab40250",
+    "cspStorageType": "Amazon gp2",
+    "meta": {
+        "id": "00e1c978-fbdf-431b-af68-02d8c5e3905c",
+        "objType": "Storage",
+        "timeCreated": "2019-09-17T01:46:42.882Z",
+        "timeModified": "2019-09-17T01:47:14.101Z",
+        "version": 8
+    },
+    "poolId": "4d13c38e-4759-46a1-899f-6e95d3d1d956",
+    "sizeBytes": 2147483648,
+    "storageAccessibility": {
+        "accessibilityScope": "CSPDOMAIN",
+        "accessibilityScopeObjId": "795e5d76-ee63-4366-b3d4-07bd2ab40250"
+    },
+    "tenantAccountId": "6755f243-559c-48f5-850b-d22e0af86d9f",
+    "availableBytes": 0,
+    "parcelSizeBytes": 893386752,
+    "storageIdentifier": "ec2:vol-0432c66a334a4ca0d",
+    "storageState": {
+        "attachedNodeDevice": "/dev/nvme1n1",
+        "attachedNodeId": "5ec2be07-b88f-4c19-b53c-465156df1f08",
+        "attachmentState": "ATTACHED",
+        "deviceState": "OPEN",
+        "mediaState": "FORMATTED",
+        "messages": [
+            {
+                "message": "ProvisionedState change: PROVISIONING ⇒ PROVISIONED",
+                "time": "2019-09-17T01:46:58.311Z"
+            },
+            {
+                "message": "AttachmentState change: DETACHED ⇒ ATTACHING",
+                "time": "2019-09-17T01:46:58.318Z"
+            },
+            {
+                "message": "AttachmentState change: ATTACHING ⇒ ATTACHED",
+                "time": "2019-09-17T01:47:13.900Z"
+            },
+            {
+                "message": "State change: deviceState UNUSED ⇒ FORMATTING",
+                "time": "2019-09-17T01:47:13.942Z"
+            },
+            {
+                "message": "State change: mediaState UNFORMATTED ⇒ FORMATTED",
+                "time": "2019-09-17T01:47:14.040Z"
+            },
+            {
+                "message": "Computed [availableBytes=1786773504] based on [parcelSizeBytes=893386752]",
+                "time": "2019-09-17T01:47:14.040Z"
+            },
+            {
+                "message": "State change: deviceState FORMATTING ⇒ OPENING",
+                "time": "2019-09-17T01:47:14.040Z"
+            },
+            {
+                "message": "Allocated 1704MiB to VSR 347dc68c-e95c-4d7f-8c27-4f92d0ce4c47",
+                "time": "2019-09-17T01:47:14.096Z"
+            }
+        ],
+        "provisionedState": "PROVISIONED"
+    },
+    "systemTags": [
+        "vsr.placement:347dc68c-e95c-4d7f-8c27-4f92d0ce4c47"
+    ],
+    "totalParcelCount": 2
+}

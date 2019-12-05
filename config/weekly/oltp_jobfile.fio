@@ -1,0 +1,93 @@
+# Copyright 2019 Tad Lebeck
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[seq-read]
+ # Sequential reads
+ rw=read
+ rwmixread=90
+ # Size of the file
+ # Diables posix_fadvise - predeclare an access pattern for file data
+ fadvise_hint=0
+ # Block size
+ blocksize=8k
+ # Use of direct I/O
+ direct=1
+ # Number of I/O threads :
+ numjobs=1
+ # Number of files :
+ nrfiles=1
+ # Duration of the test in seconds
+ runtime=14400
+ # Usage of ASYNC I/O
+ ioengine=libaio
+ # Runtime based, overwrites or overreads several times the specified file
+ time_based=1
+ # To free pagecache, dentries and inodes (only possible as root, therefore commented out) :
+ # exec_prerun=echo 3 > /proc/sys/vm/drop_caches
+ size=20g
+
+[seq-write]
+ rw=write
+ rwmixread=10
+ fadvise_hint=0
+ blocksize=8k
+ direct=1
+ numjobs=1
+ nrfiles=1
+ runtime=14400
+ ioengine=libaio
+ time_based=1
+ size=20g
+
+[random-read]
+ # Each process allocates one file, therefore to have 10G the size should be set to 1G with 10 processes
+ rw=randread
+ rwmixread=90
+ size=2g
+ fadvise_hint=0
+ blocksize=8k
+ direct=1
+ numjobs=10
+ nrfiles=1
+ runtime=14400
+ ioengine=libaio
+ time_based=1
+
+[random-write]
+ # Each process allocates one file, therefore to have 10G the size should be set to 1G with 10 processes
+ rw=randwrite
+ rwmixread=10
+ size=1g
+ fadvise_hint=0
+ blocksize=8k
+ direct=1
+ numjobs=10
+ nrfiles=1
+ runtime=14400
+ ioengine=libaio
+ time_based=1
+
+[read-write]
+ # Each process allocates one file, therefore to have 10G the size should be set to 1G with 10 processes
+ rw=rw
+ rwmixread=70
+ size=3g
+ fadvise_hint=0
+ blocksize=8k
+ direct=1
+ numjobs=1
+ nrfiles=1
+ runtime=14400
+ ioengine=libaio
+ time_based=1
